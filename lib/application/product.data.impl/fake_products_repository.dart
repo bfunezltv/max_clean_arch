@@ -10,7 +10,7 @@ import 'fake_products_data_source.dart';
 
 @Injectable(as: ProductsRepository)
 class FakeProductsRepository extends ProductsRepository {
-  FakeProductsRepository({required this.dataSource}) : super();
+  const FakeProductsRepository({required this.dataSource});
 
   final FakeProductsDataSource dataSource;
 
