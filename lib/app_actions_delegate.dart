@@ -29,13 +29,13 @@ class AppActionsDelegate extends ActionsDelegate {
   @override
   void onSplashHidden() => (splashHiddenStream as Subject).add(null);
 
-  // @override
-  // final Stream<ErrorAndStackTrace> loggedInErrorStream = PublishSubject(); //
-  // @override
-  // void onLoggedInError(ErrorAndStackTrace error) => (loggedInErrorStream as Subject).add(error);
-  //
-  // @override
-  // final Stream<void> loggedOutStream = PublishSubject(); //
-  // @override
-  // void onLoggedOut() => (loggedOutStream as Subject).add(null);
+// @override
+// final Stream<ErrorAndStackTrace> loggedInErrorStream = PublishSubject(); //
+// @override
+// void onLoggedInError(ErrorAndStackTrace error) => (loggedInErrorStream as Subject).add(error);
+//
+// @override
+// final Stream<void> loggedOutStream = PublishSubject(); //
+// @override
+// void onLoggedOut() => (loggedOutStream as Subject).add(null);
 }

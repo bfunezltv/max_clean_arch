@@ -25,10 +25,10 @@ class AppNavigator {
       _actionsDelegate.splashHiddenStream.listen((hide) {
         navigator
           ?..popUntil((route) => false)
-          ..pushNamed(Routes.productsList);
+          ..pushNamed(AppRoutes.productsList);
       }),
       _actionsDelegate.productOpenedStream.listen((product) {
-        navigator?.pushNamed(Routes.productDetails, arguments: product);
+        navigator?.pushNamed(AppRoutes.productDetails, arguments: product);
       }),
     ];
   }
