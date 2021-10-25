@@ -13,6 +13,7 @@ class ProductDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const imageSize = kProductDetailsImageSize;
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -27,7 +28,7 @@ class ProductDetailsWidget extends StatelessWidget {
                     product.image,
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
-                    height: kProductPreviewImageSize,
+                    height: imageSize,
                   ),
                 ),
                 //then load and show hq image atop
@@ -36,7 +37,7 @@ class ProductDetailsWidget extends StatelessWidget {
                     image: NetworkImage(product.imageHq),
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
-                    height: kProductDetailsImageSize,
+                    height: imageSize,
                   ),
                 ),
               ],
