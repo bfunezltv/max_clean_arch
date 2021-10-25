@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/presentation/const.dart';
 import 'package:transparent_image/transparent_image.dart';
-
-const _imageSize = 60.0;
 
 class ProductListItemWidget extends StatelessWidget {
   const ProductListItemWidget({required this.product, Key? key}) : super(key: key);
@@ -12,6 +11,7 @@ class ProductListItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const imageSize = kProductPreviewImageSize;
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -23,8 +23,8 @@ class ProductListItemWidget extends StatelessWidget {
               Hero(
                 tag: product.id,
                 child: SizedBox(
-                  width: _imageSize,
-                  height: _imageSize,
+                  width: imageSize,
+                  height: imageSize,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -32,7 +32,7 @@ class ProductListItemWidget extends StatelessWidget {
                         child: Icon(
                           Icons.image_outlined,
                           color: Colors.grey,
-                          size: _imageSize * 0.35,
+                          size: imageSize * 0.35,
                         ),
                       ),
                       // FadeInImage.assetNetwork(placeholder: kProductPlaceholderImageAsset,

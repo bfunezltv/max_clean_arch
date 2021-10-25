@@ -27,7 +27,7 @@ class ProductDetailsWidget extends StatelessWidget {
                     product.image,
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
-                    height: kProductImageHeight,
+                    height: kProductPreviewImageSize,
                   ),
                 ),
                 //then load and show hq image atop
@@ -36,7 +36,7 @@ class ProductDetailsWidget extends StatelessWidget {
                     image: NetworkImage(product.imageHq),
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
-                    height: kProductImageHeight,
+                    height: kProductDetailsImageSize,
                   ),
                 ),
               ],
