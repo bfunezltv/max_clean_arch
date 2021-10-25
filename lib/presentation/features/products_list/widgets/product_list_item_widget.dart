@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:max_clean_arch/core/product.domain/product.dart';
 import 'package:transparent_image/transparent_image.dart';
 
+const _imageSize = 60.0;
+
 class ProductListItemWidget extends StatelessWidget {
   const ProductListItemWidget({required this.product, Key? key}) : super(key: key);
 
@@ -20,12 +22,29 @@ class ProductListItemWidget extends StatelessWidget {
             children: [
               Hero(
                 tag: product.id,
-                child: FadeInImage.memoryNetwork(
-                  placeholder: kTransparentImage,
-                  image: product.image,
-                  width: 60,
-                  height: 60,
-                  fit: BoxFit.contain,
+                child: SizedBox(
+                  width: _imageSize,
+                  height: _imageSize,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      const Center(
+                        child: Icon(
+                          Icons.image_outlined,
+                          color: Colors.grey,
+                          size: _imageSize * 0.35,
+                        ),
+                      ),
+                      // FadeInImage.assetNetwork(placeholder: kProductPlaceholderImageAsset,
+                      Center(
+                        child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: product.image,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               // Image.network(product.image, width: 60, height: 60, fit: BoxFit.contain,),
