@@ -21,7 +21,7 @@ class ProductListItemWidget extends StatelessWidget {
           Row(
             children: [
               Hero(
-                tag: product.id,
+                tag: 'image-tag-${product.id}',
                 child: SizedBox(
                   width: imageSize,
                   height: imageSize,
@@ -50,11 +50,14 @@ class ProductListItemWidget extends StatelessWidget {
               // Image.network(product.image, width: 60, height: 60, fit: BoxFit.contain,),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(
-                  product.name,
-                  maxLines: 2,
-                  overflow: TextOverflow.clip,
-                  style: Theme.of(context).textTheme.headline6,
+                child: Hero(
+                  tag: 'name-tag-${product.id}',
+                  child: Text(
+                    product.name,
+                    maxLines: 2,
+                    overflow: TextOverflow.clip,
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
                 ),
               ),
             ],

@@ -19,7 +19,7 @@ class ProductDetailsWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Hero(
-            tag: product.id,
+            tag: 'image-tag-${product.id}',
             child: Stack(
               children: <Widget>[
                 //firstly show small image as initial
@@ -44,10 +44,13 @@ class ProductDetailsWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            product.name,
-            overflow: TextOverflow.clip,
-            style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold),
+          Hero(
+            tag: 'name-tag-${product.id}',
+            child: Text(
+              product.name,
+              overflow: TextOverflow.clip,
+              style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.bold),
+            ),
           ),
           const SizedBox(height: 8),
           Text(
