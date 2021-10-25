@@ -19,7 +19,7 @@ class AppRouteFactory {
           case AppRoutes.splash:
             return SplashPage(
               splashImageAsset: kSplashImageAsset,
-              onFirstFrame: () => getIt<HideSplashAction>(param1: kSplashTimeout).call(),
+              onFirstFrame: getIt<HideSplashAction>(param1: kSplashTimeout),
             );
           case AppRoutes.productsList:
             return const ProductsListPage();
