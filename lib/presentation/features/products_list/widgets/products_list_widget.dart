@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kt_dart/collection.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
 
 import 'product_list_item_widget.dart';
 

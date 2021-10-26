@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:max_clean_arch/application/splash.actions/hide_splash_action.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
 import 'package:max_clean_arch/di.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
+import 'package:max_clean_arch/presentation/actions/splash.actions/hide_splash_action.dart';
 import 'package:max_clean_arch/presentation/const.dart';
 import 'package:max_clean_arch/presentation/features/product_details/widgets/product_details_page.dart';
 import 'package:max_clean_arch/presentation/features/products_list/widgets/products_list_page.dart';

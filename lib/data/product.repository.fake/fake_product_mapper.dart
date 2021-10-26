@@ -1,4 +1,4 @@
-import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
 
 import 'fake_product.dart';
 

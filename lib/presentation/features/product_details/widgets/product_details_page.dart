@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
 import 'package:max_clean_arch/generated/l10n.dart';
 import 'package:max_clean_arch/presentation/features/product_details/widgets/product_details_widget.dart';
 

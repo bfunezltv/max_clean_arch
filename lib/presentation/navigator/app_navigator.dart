@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import 'package:injectable/injectable.dart';
 import 'package:max_clean_arch/app_state.dart';
-import 'package:max_clean_arch/application/actions_delegate.dart';
+import 'package:max_clean_arch/presentation/actions/actions_delegate.dart';
 
 import 'routes.dart';
 

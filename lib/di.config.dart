@@ -9,13 +9,13 @@ import 'package:injectable/injectable.dart' as _i2;
 
 import 'app_actions_delegate.dart' as _i8;
 import 'app_state.dart' as _i3;
-import 'application/actions_delegate.dart' as _i7;
-import 'application/product.actions/open_product_action.dart' as _i12;
-import 'application/product.data.impl/fake_products_data_source.dart' as _i4;
-import 'application/product.data.impl/fake_products_repository.dart' as _i6;
-import 'application/product.usecases/list_products_usecase.dart' as _i11;
-import 'application/splash.actions/hide_splash_action.dart' as _i10;
-import 'core/product.data/products_repository.dart' as _i5;
+import 'data/product.repository.fake/fake_products_data_source.dart' as _i4;
+import 'data/product.repository.fake/fake_products_repository.dart' as _i6;
+import 'domain/product.repository/products_repository.dart' as _i5;
+import 'domain/product.usecases/list_products_usecase.dart' as _i11;
+import 'presentation/actions/actions_delegate.dart' as _i7;
+import 'presentation/actions/product.actions/open_product_action.dart' as _i12;
+import 'presentation/actions/splash.actions/hide_splash_action.dart' as _i10;
 import 'presentation/features/products_list/blocs/products_list_bloc.dart'
     as _i13;
 import 'presentation/navigator/app_navigator.dart'

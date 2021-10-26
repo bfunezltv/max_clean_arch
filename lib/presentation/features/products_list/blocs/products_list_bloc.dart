@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
-import 'package:max_clean_arch/application/product.actions/open_product_action.dart';
-import 'package:max_clean_arch/application/product.usecases/list_products_usecase.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
+import 'package:max_clean_arch/domain/product.usecases/list_products_usecase.dart';
+import 'package:max_clean_arch/presentation/actions/product.actions/open_product_action.dart';
 import 'package:max_clean_arch/presentation/common/simple_bloc/simple_bloc.dart';
 import 'package:max_clean_arch/presentation/const.dart';
 

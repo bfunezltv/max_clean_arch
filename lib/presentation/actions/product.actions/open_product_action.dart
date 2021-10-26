@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
+import 'package:max_clean_arch/domain/product.entities/product.dart';
 
 import '../action.dart';
 import '../actions_delegate.dart';

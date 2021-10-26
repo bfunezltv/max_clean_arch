@@ -1,9 +1,9 @@
 import 'package:injectable/injectable.dart';
-import 'package:max_clean_arch/application/actions_delegate.dart';
-import 'package:max_clean_arch/core/product.domain/product.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'app_state.dart';
+import 'domain/product.entities/product.dart';
+import 'presentation/actions/actions_delegate.dart';
 
 @Singleton(as: ActionsDelegate)
 class AppActionsDelegate extends ActionsDelegate {
