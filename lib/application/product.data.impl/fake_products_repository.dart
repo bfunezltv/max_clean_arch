@@ -18,7 +18,7 @@ class FakeProductsRepository extends ProductsRepository {
   Future<Either<ErrorAndStackTrace, KtList<Product>>> list() async {
     try {
       final result = await dataSource.list();
-      final products = result.map(FakeProductConverter.toDomain);
+      final products = result.map(FakeProductMapper.toDomain);
       final shuffled = products.asList()..shuffle();
       return right(KtList.from(shuffled));
     } catch (error, stackTrace) {

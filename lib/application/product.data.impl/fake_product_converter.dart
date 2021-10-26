@@ -2,7 +2,7 @@ import 'package:max_clean_arch/core/product.domain/product.dart';
 
 import 'fake_product.dart';
 
-class FakeProductConverter {
+class FakeProductMapper {
   static Product toDomain(FakeProduct dto) {
     return Product(
       id: dto['id'],
