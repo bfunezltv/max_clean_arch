@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'generated/l10n.dart';
+import 'presentation/generated/l10n.dart';
 import 'presentation/navigator/app_route_factory.dart';
 import 'presentation/navigator/routes.dart';
 

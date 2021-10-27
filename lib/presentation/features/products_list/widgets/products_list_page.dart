@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:max_clean_arch/domain/product.entities/product.dart';
-import 'package:max_clean_arch/generated/l10n.dart';
+import 'package:max_clean_arch/presentation/generated/l10n.dart';
 import 'package:max_clean_arch/presentation/common/simple_bloc/simple_bloc.dart';
 import 'package:max_clean_arch/presentation/common/widgets/expanded_animated_switcher_child_layout.dart';
 import 'package:max_clean_arch/presentation/extensions/duration_x.dart';
