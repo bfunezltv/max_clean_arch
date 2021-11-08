@@ -1,6 +1,7 @@
 import 'dart:core';
 
 import 'package:bloc/bloc.dart';
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:max_clean_arch/presentation/common/min_exec_time_task.dart';
@@ -59,7 +60,7 @@ abstract class SimpleBloc<D> extends Bloc<SimpleBlocEvent, SimpleBlocState<D>> {
         _error.value = error is ErrorAndStackTrace ? error : ErrorAndStackTrace(error, stackTrace);
         emit(SimpleBlocState.completed(left(_error.value!)));
       }
-    });
+    }, transformer: restartable());
   }
 
   void resetError() {
