@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class SplashImageWidget extends StatelessWidget {
-  const SplashImageWidget({required this.splashImageAsset, Key? key}) : super(key: key);
+  const SplashImageWidget({required this.splashImage, Key? key}) : super(key: key);
 
-  final String splashImageAsset;
+  final ImageProvider splashImage;
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      splashImageAsset,
+    return Image(
+      image: splashImage,
       fit: BoxFit.contain,
       key: const Key('splash-image'),
     );

@@ -7,6 +7,7 @@ import 'package:max_clean_arch/presentation/const.dart';
 import 'package:max_clean_arch/presentation/features/product_details/widgets/product_details_page.dart';
 import 'package:max_clean_arch/presentation/features/products_list/widgets/products_list_page.dart';
 import 'package:max_clean_arch/presentation/features/splash/widgets/splash_page.dart';
+import 'package:max_clean_arch/presentation/generated/assets.gen.dart';
 
 import 'routes.dart';
 
@@ -18,7 +19,7 @@ class AppRouteFactory {
         switch (settings.name) {
           case AppRoutes.splash:
             return SplashPage(
-              splashImageAsset: kSplashImageAsset,
+              splashImage: Assets.splash.shoppingSplash,
               onFirstFrame: getIt<HideSplashAction>(param1: kSplashTimeout),
             );
           case AppRoutes.productsList:
@@ -26,7 +27,7 @@ class AppRouteFactory {
           case AppRoutes.productDetails:
             return ProductDetailsPage(product: settings.arguments as Product);
           default:
-            // normally it shouldn't be happen
+            // normally it shouldn't happen
             return Container();
         }
       },

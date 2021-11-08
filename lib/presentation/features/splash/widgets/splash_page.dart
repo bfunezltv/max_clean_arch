@@ -5,9 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'splash_image_widget.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({required this.splashImageAsset, required this.onFirstFrame, Key? key}) : super(key: key);
+  const SplashPage({required this.splashImage, required this.onFirstFrame, Key? key}) : super(key: key);
 
-  final String splashImageAsset;
+  final ImageProvider splashImage;
   final VoidCallback onFirstFrame;
 
   @override
@@ -32,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(64),
           child: SplashImageWidget(
-            splashImageAsset: widget.splashImageAsset,
+            splashImage: widget.splashImage,
           ),
         ),
       ),
