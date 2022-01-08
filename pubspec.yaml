@@ -42,7 +42,7 @@ dependencies:
   freezed_annotation: any
   injectable: any
   rxdart: any
-  bloc: ">=8.0.0-dev.4"
+  bloc: ^8.0.2
   bloc_concurrency: any
   flutter_bloc: any
   transparent_image: any
