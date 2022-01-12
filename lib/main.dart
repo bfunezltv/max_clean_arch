@@ -5,10 +5,11 @@ import 'package:injectable/injectable.dart';
 import 'di.dart';
 import 'my_app.dart';
 import 'presentation/features/products_list/blocs/products_list_bloc.dart';
-import 'presentation/navigator/app_navigator.dart';
+import 'presentation/navigation/app_router.dart';
 
 void main() async {
   await configureDependencies(environmentFilter: SimpleEnvironmentFilter(filter: (_) => true));
+  final appRouter = getIt<AppRouter>();
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider<ProductsListBloc>(
@@ -16,7 +17,7 @@ void main() async {
       )
     ],
     child: MyApp(
-      navigatorKey: getIt<AppNavigator>().navigatorKey,
+      appRouter: appRouter,
     ),
   ));
 }

@@ -1,41 +1,21 @@
 import 'package:injectable/injectable.dart';
-import 'package:rxdart/rxdart.dart';
 
-import 'app_state.dart';
-import 'domain/product.entities/product.dart';
 import 'presentation/actions/actions_delegate.dart';
+import 'state/app_state_manager.dart';
 
 @Singleton(as: ActionsDelegate)
 class AppActionsDelegate extends ActionsDelegate {
-  AppActionsDelegate(this.appState) {
+  AppActionsDelegate(this._appStateManager) {
     _init();
   }
 
-  final AppState appState;
+  final AppStateManager _appStateManager;
 
   void _init() {
-    productOpenedStream.pipe(appState.lastProduct);
-    splashHiddenStream.map((event) => false).pipe(appState.showingSplash);
+    productOpen.listen((product) {
+      _appStateManager.setLastProduct(product.id);
+    });
+    // productOpen.pipe(appState.lastProduct);
     // Rx.concat([loggedInStream, loggedOutStream.map((event) => const AuthInfo.unknown())]).pipe(appState.authInfo);
   }
-
-  @override
-  final Stream<Product> productOpenedStream = PublishSubject(); //
-  @override
-  void onProductOpened(Product product) => (productOpenedStream as Subject).add(product);
-
-  @override
-  final Stream<void> splashHiddenStream = PublishSubject(); //
-  @override
-  void onSplashHidden() => (splashHiddenStream as Subject).add(null);
-
-// @override
-// final Stream<ErrorAndStackTrace> loggedInErrorStream = PublishSubject(); //
-// @override
-// void onLoggedInError(ErrorAndStackTrace error) => (loggedInErrorStream as Subject).add(error);
-//
-// @override
-// final Stream<void> loggedOutStream = PublishSubject(); //
-// @override
-// void onLoggedOut() => (loggedOutStream as Subject).add(null);
 }

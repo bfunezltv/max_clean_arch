@@ -1,10 +1,8 @@
 import 'package:max_clean_arch/domain/product.entities/product.dart';
+import 'package:max_clean_arch/domain/splash.entities/splash_status.dart';
+import 'package:rxdart/rxdart.dart';
 
 abstract class ActionsDelegate {
-  Stream<Product> get productOpenedStream; //
-  void onProductOpened(Product product);
-
-  //
-  Stream<void> get splashHiddenStream; //
-  void onSplashHidden();
+  final productOpen = PublishSubject<Product>();
+  final splashShow = BehaviorSubject.seeded(SplashStatus.initial); //
 }

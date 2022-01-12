@@ -1,26 +1,26 @@
+
 import 'package:flutter/material.dart';
 
 import 'presentation/generated/l10n.dart';
-import 'presentation/navigator/app_route_factory.dart';
-import 'presentation/navigator/routes.dart';
+import 'presentation/navigation/app_router.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({this.navigatorKey, Key? key}) : super(key: key);
+  const MyApp({required this.appRouter, Key? key}) : super(key: key);
 
-  final GlobalKey<NavigatorState>? navigatorKey;
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: navigatorKey,
+    return MaterialApp.router(
+      routeInformationParser: appRouter.routeInformationParser,
+      routerDelegate: appRouter.routerDelegate,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       localizationsDelegates: const [
         S.delegate,
       ],
-      initialRoute: AppRoutes.splash,
-      onGenerateRoute: AppRouteFactory(),
     );
   }
 }
+

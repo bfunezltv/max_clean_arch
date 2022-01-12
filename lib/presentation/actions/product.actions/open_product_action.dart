@@ -13,5 +13,5 @@ class OpenProductAction implements Action {
   final ActionsDelegate delegate;
 
   @override
-  void call([covariant Product? product]) => delegate.onProductOpened(product!);
+  void call([covariant Product? product]) => delegate.productOpen.add(product!);
 }
