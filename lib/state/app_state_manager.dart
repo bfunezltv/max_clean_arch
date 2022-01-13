@@ -11,5 +11,7 @@ class AppStateManager extends ValueNotifier<AppStateInfo> {
 
   AppStateInfo get state => value;
 
-  void setLastProduct(ProductId productId) => value = state.copyWith(lastProductId: productId);
+  void setInitialized(bool initialized) => value = state.copyWith(initialized: initialized); //
+  void setLastProduct(ProductId productId) => value = state.copyWith(lastProductId: productId); //
+
 }

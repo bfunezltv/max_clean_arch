@@ -14,7 +14,6 @@ import 'domain/product.repository/products_repository.dart' as _i5;
 import 'domain/product.usecases/list_products_usecase.dart' as _i10;
 import 'presentation/actions/actions_delegate.dart' as _i7;
 import 'presentation/actions/product.actions/open_product_action.dart' as _i11;
-import 'presentation/actions/splash.actions/splash_action.dart' as _i13;
 import 'presentation/features/products_list/blocs/products_list_bloc.dart'
     as _i12;
 import 'presentation/navigation/app_router.dart' as _i9;
@@ -41,7 +40,5 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i12.ProductsListBloc>(() => _i12.ProductsListBloc(
       listProducts: get<_i10.ListProductsUsecase>(),
       openProduct: get<_i11.OpenProductAction>()));
-  gh.factoryParam<_i13.ShowSplashAction, Duration?, dynamic>((timeout, _) =>
-      _i13.ShowSplashAction(get<_i7.ActionsDelegate>(), timeout));
   return get;
 }

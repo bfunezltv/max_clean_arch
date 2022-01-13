@@ -47,6 +47,7 @@ dependencies:
   flutter_bloc: any
   transparent_image: any
   go_router: ^3.0.0
+  flutter_hooks: ^0.18.2
 
 dev_dependencies:
   flutter_test:

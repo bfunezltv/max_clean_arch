@@ -14,38 +14,41 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$AppStateTearOff {
-  const _$AppStateTearOff();
+class _$AppStateInfoTearOff {
+  const _$AppStateInfoTearOff();
 
-  _AppState call({String? lastProductId}) {
-    return _AppState(
+  _AppStateInfo call({bool? initialized, String? lastProductId}) {
+    return _AppStateInfo(
+      initialized: initialized,
       lastProductId: lastProductId,
     );
   }
 }
 
 /// @nodoc
-const $AppState = _$AppStateTearOff();
+const $AppStateInfo = _$AppStateInfoTearOff();
 
 /// @nodoc
-mixin _$AppState {
+mixin _$AppStateInfo {
+  bool? get initialized => throw _privateConstructorUsedError;
   String? get lastProductId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AppStateCopyWith<AppStateInfo> get copyWith =>
+  $AppStateInfoCopyWith<AppStateInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AppStateCopyWith<$Res> {
-  factory $AppStateCopyWith(AppStateInfo value, $Res Function(AppStateInfo) then) =
-      _$AppStateCopyWithImpl<$Res>;
-  $Res call({String? lastProductId});
+abstract class $AppStateInfoCopyWith<$Res> {
+  factory $AppStateInfoCopyWith(
+          AppStateInfo value, $Res Function(AppStateInfo) then) =
+      _$AppStateInfoCopyWithImpl<$Res>;
+  $Res call({bool? initialized, String? lastProductId});
 }
 
 /// @nodoc
-class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
-  _$AppStateCopyWithImpl(this._value, this._then);
+class _$AppStateInfoCopyWithImpl<$Res> implements $AppStateInfoCopyWith<$Res> {
+  _$AppStateInfoCopyWithImpl(this._value, this._then);
 
   final AppStateInfo _value;
   // ignore: unused_field
@@ -53,9 +56,14 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? initialized = freezed,
     Object? lastProductId = freezed,
   }) {
     return _then(_value.copyWith(
+      initialized: initialized == freezed
+          ? _value.initialized
+          : initialized // ignore: cast_nullable_to_non_nullable
+              as bool?,
       lastProductId: lastProductId == freezed
           ? _value.lastProductId
           : lastProductId // ignore: cast_nullable_to_non_nullable
@@ -65,27 +73,35 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AppStateCopyWith<$Res> implements $AppStateCopyWith<$Res> {
-  factory _$AppStateCopyWith(_AppState value, $Res Function(_AppState) then) =
-      __$AppStateCopyWithImpl<$Res>;
+abstract class _$AppStateInfoCopyWith<$Res>
+    implements $AppStateInfoCopyWith<$Res> {
+  factory _$AppStateInfoCopyWith(
+          _AppStateInfo value, $Res Function(_AppStateInfo) then) =
+      __$AppStateInfoCopyWithImpl<$Res>;
   @override
-  $Res call({String? lastProductId});
+  $Res call({bool? initialized, String? lastProductId});
 }
 
 /// @nodoc
-class __$AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
-    implements _$AppStateCopyWith<$Res> {
-  __$AppStateCopyWithImpl(_AppState _value, $Res Function(_AppState) _then)
-      : super(_value, (v) => _then(v as _AppState));
+class __$AppStateInfoCopyWithImpl<$Res> extends _$AppStateInfoCopyWithImpl<$Res>
+    implements _$AppStateInfoCopyWith<$Res> {
+  __$AppStateInfoCopyWithImpl(
+      _AppStateInfo _value, $Res Function(_AppStateInfo) _then)
+      : super(_value, (v) => _then(v as _AppStateInfo));
 
   @override
-  _AppState get _value => super._value as _AppState;
+  _AppStateInfo get _value => super._value as _AppStateInfo;
 
   @override
   $Res call({
+    Object? initialized = freezed,
     Object? lastProductId = freezed,
   }) {
-    return _then(_AppState(
+    return _then(_AppStateInfo(
+      initialized: initialized == freezed
+          ? _value.initialized
+          : initialized // ignore: cast_nullable_to_non_nullable
+              as bool?,
       lastProductId: lastProductId == freezed
           ? _value.lastProductId
           : lastProductId // ignore: cast_nullable_to_non_nullable
@@ -96,42 +112,49 @@ class __$AppStateCopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AppState implements _AppState {
-  const _$_AppState({this.lastProductId});
+class _$_AppStateInfo implements _AppStateInfo {
+  const _$_AppStateInfo({this.initialized, this.lastProductId});
 
+  @override
+  final bool? initialized;
   @override
   final String? lastProductId;
 
   @override
   String toString() {
-    return 'AppState(lastProductId: $lastProductId)';
+    return 'AppStateInfo(initialized: $initialized, lastProductId: $lastProductId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AppState &&
+            other is _AppStateInfo &&
+            (identical(other.initialized, initialized) ||
+                other.initialized == initialized) &&
             (identical(other.lastProductId, lastProductId) ||
                 other.lastProductId == lastProductId));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, lastProductId);
+  int get hashCode => Object.hash(runtimeType, initialized, lastProductId);
 
   @JsonKey(ignore: true)
   @override
-  _$AppStateCopyWith<_AppState> get copyWith =>
-      __$AppStateCopyWithImpl<_AppState>(this, _$identity);
+  _$AppStateInfoCopyWith<_AppStateInfo> get copyWith =>
+      __$AppStateInfoCopyWithImpl<_AppStateInfo>(this, _$identity);
 }
 
-abstract class _AppState implements AppStateInfo {
-  const factory _AppState({String? lastProductId}) = _$_AppState;
+abstract class _AppStateInfo implements AppStateInfo {
+  const factory _AppStateInfo({bool? initialized, String? lastProductId}) =
+      _$_AppStateInfo;
 
+  @override
+  bool? get initialized;
   @override
   String? get lastProductId;
   @override
   @JsonKey(ignore: true)
-  _$AppStateCopyWith<_AppState> get copyWith =>
+  _$AppStateInfoCopyWith<_AppStateInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }
