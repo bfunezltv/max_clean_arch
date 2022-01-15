@@ -43,8 +43,9 @@ dependencies:
   injectable: any
   rxdart: any
   bloc: ^8.0.2
-  bloc_concurrency: any
   flutter_bloc: any
+  single_bloc:
+    path:  packages/single_bloc
   transparent_image: any
   go_router: ^3.0.0
   flutter_hooks: ^0.18.2

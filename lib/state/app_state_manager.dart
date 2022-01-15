@@ -6,12 +6,12 @@ import 'app_state.dart';
 @singleton
 class AppStateManager extends ValueNotifier<AppStateInfo> {
   AppStateManager() : super(const AppStateInfo()) {
-    addListener(() => print('app state changed: $state'));
+    addListener(() => print('app state changed: $value'));
   }
 
   AppStateInfo get state => value;
 
-  void setInitialized(bool initialized) => value = state.copyWith(initialized: initialized); //
-  void setLastProduct(ProductId productId) => value = state.copyWith(lastProductId: productId); //
+  void setInitialized(bool initialized) => value = value.copyWith(initialized: initialized); //
+  void setLastProduct(ProductId productId) => value = value.copyWith(lastProductId: productId); //
 
 }

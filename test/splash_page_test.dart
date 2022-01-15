@@ -7,12 +7,12 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:max_clean_arch/presentation/features/splash/widgets/splash_image_widget.dart';
+import 'package:max_clean_arch/presentation/features/splash/widgets/splash_page.dart';
 import 'package:max_clean_arch/presentation/generated/assets.gen.dart';
 
 void main() {
-  testWidgets('Splash image test', (WidgetTester tester) async {
-    await tester.pumpWidget(SplashImageWidget(
+  testWidgets('Verify SplashWidget shows the splash image', (WidgetTester tester) async {
+    await tester.pumpWidget(SplashPage(
       splashImage: Assets.splash.shoppingSplash,
     ));
     expect(find.byKey(const Key('splash-image')), findsOneWidget);

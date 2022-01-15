@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'presentation/generated/l10n.dart';
@@ -23,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
