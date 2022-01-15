@@ -1,8 +1,7 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'simple_bloc.dart';
+part of 'single_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$SimpleBlocStateTearOff {
-  const _$SimpleBlocStateTearOff();
+class _$SingleBlocStateTearOff {
+  const _$SingleBlocStateTearOff();
 
   _Idle<D> idle<D>() {
     return _Idle<D>();
@@ -33,22 +32,15 @@ class _$SimpleBlocStateTearOff {
 }
 
 /// @nodoc
-const $SimpleBlocState = _$SimpleBlocStateTearOff();
+const $SingleBlocState = _$SingleBlocStateTearOff();
 
 /// @nodoc
-mixin _$SimpleBlocState<D> {
+mixin _$SingleBlocState<D> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() inProgress,
     required TResult Function(Either<ErrorAndStackTrace, D> either) completed,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? inProgress,
-    TResult Function(Either<ErrorAndStackTrace, D> either)? completed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,13 +59,6 @@ mixin _$SimpleBlocState<D> {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Idle<D> value)? idle,
-    TResult Function(_Progress<D> value)? inProgress,
-    TResult Function(_Completed<D> value)? completed,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Idle<D> value)? idle,
     TResult Function(_Progress<D> value)? inProgress,
@@ -84,20 +69,20 @@ mixin _$SimpleBlocState<D> {
 }
 
 /// @nodoc
-abstract class $SimpleBlocStateCopyWith<D, $Res> {
-  factory $SimpleBlocStateCopyWith(
-          SimpleBlocState<D> value, $Res Function(SimpleBlocState<D>) then) =
-      _$SimpleBlocStateCopyWithImpl<D, $Res>;
+abstract class $SingleBlocStateCopyWith<D, $Res> {
+  factory $SingleBlocStateCopyWith(
+          SingleBlocState<D> value, $Res Function(SingleBlocState<D>) then) =
+      _$SingleBlocStateCopyWithImpl<D, $Res>;
 }
 
 /// @nodoc
-class _$SimpleBlocStateCopyWithImpl<D, $Res>
-    implements $SimpleBlocStateCopyWith<D, $Res> {
-  _$SimpleBlocStateCopyWithImpl(this._value, this._then);
+class _$SingleBlocStateCopyWithImpl<D, $Res>
+    implements $SingleBlocStateCopyWith<D, $Res> {
+  _$SingleBlocStateCopyWithImpl(this._value, this._then);
 
-  final SimpleBlocState<D> _value;
+  final SingleBlocState<D> _value;
   // ignore: unused_field
-  final $Res Function(SimpleBlocState<D>) _then;
+  final $Res Function(SingleBlocState<D>) _then;
 }
 
 /// @nodoc
@@ -108,7 +93,7 @@ abstract class _$IdleCopyWith<D, $Res> {
 
 /// @nodoc
 class __$IdleCopyWithImpl<D, $Res>
-    extends _$SimpleBlocStateCopyWithImpl<D, $Res>
+    extends _$SingleBlocStateCopyWithImpl<D, $Res>
     implements _$IdleCopyWith<D, $Res> {
   __$IdleCopyWithImpl(_Idle<D> _value, $Res Function(_Idle<D>) _then)
       : super(_value, (v) => _then(v as _Idle<D>));
@@ -118,19 +103,17 @@ class __$IdleCopyWithImpl<D, $Res>
 }
 
 /// @nodoc
-
 class _$_Idle<D> implements _Idle<D> {
   const _$_Idle();
 
   @override
   String toString() {
-    return 'SimpleBlocState<$D>.idle()';
+    return 'SingleBlocState<$D>.idle()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Idle<D>);
+    return identical(this, other) || (other is _Idle<D>);
   }
 
   @override
@@ -144,16 +127,6 @@ class _$_Idle<D> implements _Idle<D> {
     required TResult Function(Either<ErrorAndStackTrace, D> either) completed,
   }) {
     return idle();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? inProgress,
-    TResult Function(Either<ErrorAndStackTrace, D> either)? completed,
-  }) {
-    return idle?.call();
   }
 
   @override
@@ -182,16 +155,6 @@ class _$_Idle<D> implements _Idle<D> {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Idle<D> value)? idle,
-    TResult Function(_Progress<D> value)? inProgress,
-    TResult Function(_Completed<D> value)? completed,
-  }) {
-    return idle?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Idle<D> value)? idle,
     TResult Function(_Progress<D> value)? inProgress,
@@ -205,7 +168,7 @@ class _$_Idle<D> implements _Idle<D> {
   }
 }
 
-abstract class _Idle<D> implements SimpleBlocState<D> {
+abstract class _Idle<D> implements SingleBlocState<D> {
   const factory _Idle() = _$_Idle<D>;
 }
 
@@ -218,7 +181,7 @@ abstract class _$ProgressCopyWith<D, $Res> {
 
 /// @nodoc
 class __$ProgressCopyWithImpl<D, $Res>
-    extends _$SimpleBlocStateCopyWithImpl<D, $Res>
+    extends _$SingleBlocStateCopyWithImpl<D, $Res>
     implements _$ProgressCopyWith<D, $Res> {
   __$ProgressCopyWithImpl(
       _Progress<D> _value, $Res Function(_Progress<D>) _then)
@@ -229,19 +192,17 @@ class __$ProgressCopyWithImpl<D, $Res>
 }
 
 /// @nodoc
-
 class _$_Progress<D> implements _Progress<D> {
   const _$_Progress();
 
   @override
   String toString() {
-    return 'SimpleBlocState<$D>.inProgress()';
+    return 'SingleBlocState<$D>.inProgress()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Progress<D>);
+    return identical(this, other) || (other is _Progress<D>);
   }
 
   @override
@@ -255,16 +216,6 @@ class _$_Progress<D> implements _Progress<D> {
     required TResult Function(Either<ErrorAndStackTrace, D> either) completed,
   }) {
     return inProgress();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? inProgress,
-    TResult Function(Either<ErrorAndStackTrace, D> either)? completed,
-  }) {
-    return inProgress?.call();
   }
 
   @override
@@ -293,16 +244,6 @@ class _$_Progress<D> implements _Progress<D> {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Idle<D> value)? idle,
-    TResult Function(_Progress<D> value)? inProgress,
-    TResult Function(_Completed<D> value)? completed,
-  }) {
-    return inProgress?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Idle<D> value)? idle,
     TResult Function(_Progress<D> value)? inProgress,
@@ -316,7 +257,7 @@ class _$_Progress<D> implements _Progress<D> {
   }
 }
 
-abstract class _Progress<D> implements SimpleBlocState<D> {
+abstract class _Progress<D> implements SingleBlocState<D> {
   const factory _Progress() = _$_Progress<D>;
 }
 
@@ -330,7 +271,7 @@ abstract class _$CompletedCopyWith<D, $Res> {
 
 /// @nodoc
 class __$CompletedCopyWithImpl<D, $Res>
-    extends _$SimpleBlocStateCopyWithImpl<D, $Res>
+    extends _$SingleBlocStateCopyWithImpl<D, $Res>
     implements _$CompletedCopyWith<D, $Res> {
   __$CompletedCopyWithImpl(
       _Completed<D> _value, $Res Function(_Completed<D>) _then)
@@ -353,7 +294,6 @@ class __$CompletedCopyWithImpl<D, $Res>
 }
 
 /// @nodoc
-
 class _$_Completed<D> implements _Completed<D> {
   const _$_Completed(this.either);
 
@@ -362,19 +302,20 @@ class _$_Completed<D> implements _Completed<D> {
 
   @override
   String toString() {
-    return 'SimpleBlocState<$D>.completed(either: $either)';
+    return 'SingleBlocState<$D>.completed(either: $either)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _Completed<D> &&
-            (identical(other.either, either) || other.either == either));
+        (other is _Completed<D> &&
+            (identical(other.either, either) ||
+                const DeepCollectionEquality().equals(other.either, either)));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, either);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(either);
 
   @JsonKey(ignore: true)
   @override
@@ -389,16 +330,6 @@ class _$_Completed<D> implements _Completed<D> {
     required TResult Function(Either<ErrorAndStackTrace, D> either) completed,
   }) {
     return completed(either);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? idle,
-    TResult Function()? inProgress,
-    TResult Function(Either<ErrorAndStackTrace, D> either)? completed,
-  }) {
-    return completed?.call(either);
   }
 
   @override
@@ -427,16 +358,6 @@ class _$_Completed<D> implements _Completed<D> {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Idle<D> value)? idle,
-    TResult Function(_Progress<D> value)? inProgress,
-    TResult Function(_Completed<D> value)? completed,
-  }) {
-    return completed?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Idle<D> value)? idle,
     TResult Function(_Progress<D> value)? inProgress,
@@ -450,11 +371,12 @@ class _$_Completed<D> implements _Completed<D> {
   }
 }
 
-abstract class _Completed<D> implements SimpleBlocState<D> {
+abstract class _Completed<D> implements SingleBlocState<D> {
   const factory _Completed(Either<ErrorAndStackTrace, D> either) =
       _$_Completed<D>;
 
-  Either<ErrorAndStackTrace, D> get either;
+  Either<ErrorAndStackTrace, D> get either =>
+      throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$CompletedCopyWith<D, _Completed<D>> get copyWith =>
       throw _privateConstructorUsedError;

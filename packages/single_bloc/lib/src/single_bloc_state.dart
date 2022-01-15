@@ -1,13 +1,13 @@
-part of 'simple_bloc.dart';
+part of 'single_bloc.dart';
 
 @freezed
-class SimpleBlocState<D> with _$SimpleBlocState {
-  const factory SimpleBlocState.idle() = _Idle; //
-  const factory SimpleBlocState.inProgress() = _Progress; //
-  const factory SimpleBlocState.completed(Either<ErrorAndStackTrace, D> either) = _Completed; //
+class SingleBlocState<D> with _$SingleBlocState {
+  const factory SingleBlocState.idle() = _Idle; //
+  const factory SingleBlocState.inProgress() = _Progress; //
+  const factory SingleBlocState.completed(Either<ErrorAndStackTrace, D> either) = _Completed; //
 }
 
-extension SimpleBlocStateX<D> on SimpleBlocState<D> {
+extension SingleBlocStateX<D> on SingleBlocState<D> {
   bool get isIdle => this is _Idle;
 
   bool get inProgress => this is _Progress;

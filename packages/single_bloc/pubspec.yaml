@@ -1,0 +1,20 @@
+name: single_bloc
+description: A SingleBloc that is responsible just for a single BLoC event in trying to follow the SOLID principles.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  bloc: ^8.0.2
+  bloc_concurrency: ^0.2.0
+  dartz: any
+  rxdart: any
+  freezed_annotation: any
+
+dev_dependencies:
+  freezed: any
+  build_runner: ^1.10.0
+#  mocktail: ^0.1.0
+#  test: ^1.16.4
